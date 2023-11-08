@@ -1,37 +1,68 @@
-.submitBtn{
+.submitBtn {
     border: none;
     outline: none;
     background: white;
-    font-size: 17px;
-    padding: 10px;
-    border-radius: 8px;
-    width: 10%;
+    font-size: 20px;
+    padding: 13px;
+    border-radius: 11px;
+    width: 15%;
     cursor: pointer;
 }
-.inputBox{
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 20px;
+.inputBox {
+    padding: 13px;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
 }
-    .wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        gap: 2rem;
-        background: black;
-
-
-    }
-    .imageShow{
-        display: grid;
-        
-    }
-    .imageShow > img{
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    background: #009688;
+}
+    /* .imageShow > img {
         width: 100%;
-    height: 500px;
-    object-fit: cover;
-    
+        height: 100%;
+        object-fit: cover;
+    } */
+    .imageShow {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
     }
-    
+    .imageBtnWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        min-height: 400px;
+    }
+    img.imageClass {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    button.copyPaste {
+        width: 100%;
+        height: 50px;
+        /* margin-top: 1rem; */
+        border: none;
+        background: linear-gradient(45deg, #FFF3E0, #F44336);
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        line-height: 25px;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    @media (max-width:767px){
+        .imageShow {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1rem;
+        } 
+    }
